@@ -27,9 +27,13 @@ class Main extends Component {
 
       return (
       <View style={styles.container}>
-
+                <Text style={styles.Title}> Sigmaapp</Text>
         <View style={styles.ButtonContainer}>
-        <TouchableOpacity style={styles.button}> </TouchableOpacity>
+        <TouchableOpacity 
+        onPress={()=> navigate('Rate')}
+        style={styles.button}>
+            <Text style={styles.ButtonText}> Calificar alumnos {"\n"} "Introducción a los {"\n"} sistemas de información"</Text>
+        </TouchableOpacity>
         </View>
       </View>
     );
@@ -43,22 +47,35 @@ export default Main;
   
 
 const styles = StyleSheet.create({
-  container: {
+  
+  Title:{
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: "#000000"
+},
+    container: {
     width: window.width * 1,
     height: window.height * 1,
     alignItems: 'center',
     backgroundColor: '#FFF',
+    justifyContent: 'center'
   },
-
-
   ButtonContainer:{
-      marginTop: 100
+      marginTop: 30
   },
   button:{
-      width: 200,
-      height: 100,
       borderRadius: 50,
-      backgroundColor: 'grey'
+      backgroundColor: 'white',
+      justifyContent: "center",
+      alignItems: "center",
+      borderColor: '#FFC107',
+      borderWidth: 2,
+      padding:30
+  },
+  ButtonText: {
+      fontSize: 18,
+      fontWeight: "bold",
+      color: "#000000"
   }
 
 });
